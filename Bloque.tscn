@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://df43eq6n04hm1"]
+
+[ext_resource type="Script" uid="uid://t6q13kpkvv4f" path="res://rigid_body_2d.gd" id="1_4371s"]
+[ext_resource type="Texture2D" uid="uid://c674qs7xxl52b" path="res://sprites_arkanoid/sprites/block_red.png" id="2_yht2x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kscvx"]
+size = Vector2(32, 22)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1425161294]
+gravity_scale = 0.0
+script = ExtResource("1_4371s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=664217342]
+scale = Vector2(2.0625, 2.7499998)
+texture = ExtResource("2_yht2x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1738739833]
+shape = SubResource("RectangleShape2D_kscvx")

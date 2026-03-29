@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bc5s05unmpgsw"]
+
+[ext_resource type="Script" uid="uid://cebcrlhld418" path="res://menu_victoria.gd" id="1_dva3v"]
+
+[node name="menuVictoria" type="Control" unique_id=422790973]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dva3v")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1765046530]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=821386558]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.5
+offset_top = 49.0
+offset_right = 36.5
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0.6389545, 1.347661e-06, 1)
+theme_override_font_sizes/font_size = 25
+text = "VICTORIA"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=762585552]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.75
+offset_top = -20.0
+offset_right = 107.75
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1976890798]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "VOLVER AL MENU"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

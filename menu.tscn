@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://men248akwkod"]
+
+[ext_resource type="Texture2D" uid="uid://bbvysunoa1keq" path="res://sprites_arkanoid/sprites/walpaperArkanoid.png" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://bnmml021wa7q4" path="res://menu.gd" id="1_ouk20"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+bg_color = Color(1, 0.33333334, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+bg_color = Color(0.33333334, 1, 1, 1)
+
+[node name="Menu" type="Control" unique_id=674157798]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ouk20")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1183281203]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_right = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lti8b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1017528737]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.5
+offset_top = -48.625
+offset_right = 130.5
+offset_bottom = 48.625
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="ButtonJugar" type="Button" parent="VBoxContainer" unique_id=1999544839]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+text = "JUGAR
+"
+
+[node name="ButtonSalir" type="Button" parent="VBoxContainer" unique_id=150487138]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_mae5d")
+text = "SALIR
+"
+
+[connection signal="pressed" from="VBoxContainer/ButtonJugar" to="." method="_on_button_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonSalir" to="." method="_on_button_salir_pressed"]
